@@ -1,14 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=DM+Serif+Text&family=Ubuntu&display=swap');
 
-/* Variables */
 :root {
-  --font-family: "Roboto", sans-serf;
+  --font-family: 'Be Vietnam Pro', sans-serif;
+  --font-family: 'DM Serif Text', serif;
+  --font-family: 'Ubuntu', sans-serif;
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
   --bg-color: #fcfcfc;
   --primary-color: #7c4fed;
-  --secondary-color: #ff7235;
+  --secondary-color: #B294FF;
   --primary-shadow: #8b8eaf;
   --secondary-shadow: #a17a69;
   --bottom-margin: 0.5rem;
@@ -16,13 +17,10 @@
   --line-height: 1.7rem;
   --transition: 0.3s;
 }
-/* Variables end */
 
 html {
   scroll-behavior: smooth;
 }
-
-/* CSS Resets */
 
 * {
   margin: 0;
@@ -50,10 +48,22 @@ h2 {
   font-size: 30px;
 }
 h3 {
-	margin-bottom: 2rem;
+	font-size: 22px;
+	margin-bottom: 1rem;
+	font-family: DM Serif Text;
+}
+h4 {
+	color: #8E8A91;
+	margin-bottom: 1rem;
+}
+h5 {
+	font-size: 18px;
+	color: #73627E;
+	margin-bottom: 1rem;
 }
 p {
 	margin-bottom: 1rem;
+	font-family: Be Vietnam Pro;
 }
 nav {
   position: fixed;
@@ -107,7 +117,8 @@ nav ul li {
 }
 
 .bio {
-  width: 25rem;
+  text-align: center;
+  width: 35rem;
   padding: 0.625rem;
   border-radius: 6px;
   box-shadow: 0px 2px 15px 2px var(--primary-shadow);
@@ -126,18 +137,16 @@ nav ul li {
   margin: auto;
 }
 .skills {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   max-width: 68.75rem;
   margin: auto;
-  text-align: center;
-  margin-top: 2.5rem;
 }
 
 .skill-header {
   font-size: 45px;
-  margin-bottom: 8rem;
+  color: #2C2C2C;
+  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+  font-family: Ubuntu;
 }
 
 .skills-wrapper img {
@@ -155,9 +164,6 @@ nav ul li {
   padding: 20px;
   margin: 10px;
 }
-.m-0 {
-    margin: 0 !important;
-}
 hr {
     display: block;
     unicode-bidi: isolate;
@@ -167,46 +173,47 @@ hr {
     margin-inline-end: auto;
     overflow: hidden;
 }
-}
-.social-icons .social-icon {
+.social-icons .social-icon{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 3.5rem;
-  width: 3.5rem;
-  background-color: #495057;
+  height: 3rem;
+  width: 3rem;
+  background-color: #7c4fed;
   color: #fff;
   border-radius: 100%;
-  font-size: 1.5rem;
+  font-size:1.5rem;
   margin-right: 1.5rem;
 }
 .social-icons .social-icon:last-child {
   margin-right: 0;
 }
 .social-icons .social-icon:hover {
-  background-color: #bd5d38;
+  background-color: var(--secondary-color);
 }
-html, body {
+body {
     margin: 0;
-    height:100%;
-    width:100%;
+    height:100vh;
+    width:100vw;
     padding:0;
 }
 
 section {
-    display: block;
     background: transparent;
-    height:100%;
-    width:100%;
-    padding: 60px;
-    padding-left: 120px;
-    box-sizing:border-box;
-}
-.centered-content {
-	height: 100vh;
 	display: flex;
-	flex-direction: column;
     align-items: center;
 	justify-content: center;
 	text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 5rem;
+	padding-bottom: 5rem;
+	max-width: 100vw;
+	min-height: 100vh;
+}
+.centered-content {
+	width: 100%;
+}
+.m-0 {
+	margin: 0;
 }

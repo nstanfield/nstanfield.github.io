@@ -3,12 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!--CSS Styles -->
+	<script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css" />
-
-    <!-- Animate CSS CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -16,22 +14,57 @@
     <title>Nathan Stanfield Portfolio</title>
   </head>
 	<script>
-    $(document).ready(function(){
-		$('.nav-link').click(function(){
-			$('.nav-link').removeClass("active");
-			$(this).addClass("active");
-		});
-	});
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top+2
+        }, 150, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('#menu-center a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('#menu-center ul li a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
 	</script>
   <body>
     <nav>
       <h1>Nathan Stanfield</h1>
+	   <div id="menu-center">
       <ul class="navigation">
         <li><a href="#about" class="nav-link active">About</a></li>
-		<li><a href="#education" class="nav-link">Education</a></li>
+		<li><a href="#education" class="nav-link">Education/Experience</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
       </ul>
+	  </div>
 	</nav>
 
     <section class="hero" id="about">
@@ -41,34 +74,46 @@
         loading="lazy"
         class="hero-img"
       />
-      <div>
+      <div class="bio">
         <h2 class="bio-title">About Me</h2>
         <p class="bio-text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sed
-          dolorem fugit sapiente porro veniam pariatur dolore nostrum delectus
-          inventore tempore minus nemo, iste ullam illo laboriosam maiores
-          repudiandae quos!
+          As a soon-to-be graduate of Bradley University with a degree in Computer Science, I am interested in a full time positions dealing with data analytics/engineering as well as software. </p><p class="bio-text">I consider myself to be detail-oriented and determined when it comes to solving problems. I am always excited to learn new technologies/systems.
         </p>
 		<br>
-		<p class="bio-text">Reach me at: <a href="mailto:nathantstanfield@gmail.com">nathantstanfield@gmail.com</a></p>
+		<p class="bio-text">Reach out at: <a href="mailto:nathantstanfield@gmail.com">nathantstanfield@gmail.com</a></p>
+		<div class="social-icons">
+                <a class="social-icon" href="https://www.linkedin.com/in/nathantstanfield/"><i class="fab fa-linkedin-in"></i></a>
+                <a class="social-icon" href="https://github.com/nstanfield"><i class="fab fa-github"></i></a>
+				<a class="social-icon" href="https://www.hackerrank.com/nstanfield"><i class="fab fa-hackerrank"></i></a>
+       </div>
       </div>
 	</section>
-	<hr>
+	 <hr class="m-0" />
 	<section class="education" id="education">
 	<div class="centered-content">
       <h2 class="skill-header">Education</h2>
 	  <h3>Bradley University</h3>
-	  <p>August 2019 - May 2023</p>
-      <p>Degree in Computer Science</p>
+	  <h4>Degree in Computer Science</h4>
+	  <h5>August 2019 - May 2023</h5>
 	  <p>GPA: </p>
-	  <br><br>
+	  <br>
 	  <h3>Geneseo High School</h3>
-	  <p>August 2015 - May 2019</p>
-      <p>Magna Cum Laude</p>
+	  <h4>Magna Cum Laude</h4>
+	  <h5>August 2015 - May 2019</h5>
 	  <p>GPA: </p>
+	  <h2 class="skill-header">Experience</h2>
+	  <h3>Overnight Grocery Clerk</h3>
+	  <h4>Kroger</h4>
+	  <h5>July 2022 - November 2022</h5>
+	  <p>Coordinated with the grocery team to accept delivery trucks. Together we kept the store organized and presentable. Handled customers and assisted with their requests.</p>
+	  <br>
+	  <h3>Lighting Crew</h3>
+	  <h4>Geneseo High School Theater Department</h4>
+	  <h5>January 2017 - April 2017</h5>
+	  <p>Worked to create the lighting system for a theater show. Process involved learning new lighting technology to create an experience to compliment the theater performance.</p>
 	  </div>
     </section>
-	<hr>
+	 <hr class="m-0" />
      <section class="skills" id="skills">
 	 <div class="centered-content">
       <h2 class="skill-header">Skills</h2>
@@ -111,33 +156,13 @@
       </div>
 	  </div>
     </section>
-	<hr>
+	 <hr class="m-0" />
     <section class="projects" id="projects">
 	<div class="centered-content">
       <h2 class="skill-header">Projects</h2>
 	  </div>
     </section>
-	<hr>
-    <!-- Contact section -->
-
-    <!-- Social accounts - Fixed to the right -->
-
-    <!-- Scroll to top -->
-
-    <!-- Footer section -->
-
-    <!-- Website scripts -->
-    <script src="assets/js/app.js"></script>
-
-    <!-- Ion icons scripts -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
+	<hr class="m-0" />
   </body>
 </html>
 
