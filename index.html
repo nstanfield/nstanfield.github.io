@@ -10,10 +10,6 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=DM+Serif+Text&family=Ubuntu&display=swap" rel="stylesheet">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
     <title>Nathan Stanfield Portfolio</title>
   </head>
 	<script>
@@ -71,12 +67,14 @@ function onScroll(event){
 	</nav>
 
     <section class="hero" id="about">
+	<div class="cropped">
       <img
         src="images/me.png"
         alt="nathan_stanfield"
         loading="lazy"
         class="hero-img"
       />
+	  </div>
       <div class="bio">
         <h2 class="bio-title">About Me</h2>
         <p class="bio-text">
@@ -98,7 +96,7 @@ function onScroll(event){
 	  <h3>Bradley University</h3>
 	  <h4>Degree in Computer Science</h4>
 	  <h5>August 2019 - May 2023</h5>
-	  <p>GPA: </p>
+	  <p>GPA: 3.69</p>
 	  <br>
 	  <h3>Geneseo High School</h3>
 	  <h4>Magna Cum Laude</h4>
@@ -122,34 +120,39 @@ function onScroll(event){
       <h2 class="skill-header">Skills</h2>
 
       <div class="skills-wrapper">
-        <div class="first-set animate__animated animate__pulse">
+        <div>
           <img
+			title="Python"
             src="icons/icon-python.png"
             alt=""
             loading="lazy"
             class="icon icon-card"
           />
           <img
+			title="MySQL"
             src="icons/icon-mysql.png"
             alt=""
             loading="lazy"
             class="icon icon-card"
           />
           <img
+			title="HTML"
             src="icons/icon-html.png"
             alt=""
             loading="lazy"
             class="icon icon-card"
           />
         </div>
-		<div class="second-set animate__animated animate__pulse">
+		<div>
           <img
+			title="CSS"
             src="icons/icon-css.png"
             alt=""
             loading="lazy"
             class="icon icon-card"
           />
 		  <img
+			title="Git"
             src="icons/icon-git.png"
             alt=""
             loading="lazy"
@@ -164,9 +167,16 @@ function onScroll(event){
 	<div class="centered-content">
       <h2 class="skill-header">Projects</h2>
 	  <h3>OSF Diabetic Ketoacidosis Project</h3>
+	  <h4>Python | Machine Learning</h4>
 	  <h3>Astronomical Data Project</h3>
+	  <h4>Python | Machine Learning</h4>
+	  <p>Used a dataset consisting of astronmical data to develop a model with machine learning algorithms. The goal of the model was to predict if an object was a star, galaxy, or quasar. A presentation was created and delivered to describe the model and findings.</p>
 	  <h3>Pathfinding Simulation Project</h3>
-	  <h3>2-Player Tictactoe Project</h3>
+	  <h4>Python | Algorithms</h4>
+	  <p>A project coded in python that allows the user to place a start and end point with obstacles walls on a grid. Then the program shows a visual simulation of the chosen pathfinding algorithm and how it would determine the shortest path from the start to the end.</p>
+	  <h3>2 Player Tic-Tac-Toe Project</h3>
+	  <h4>Python | Networking</h4>
+	  <p>Program that allows 2 players to simultaniously connect to a server and play tic-tac-toe against each other. Uses sockets and multithreading.</p>
 	  </div>
     </section>
 	<hr class="m-0" />
