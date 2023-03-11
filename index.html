@@ -75,7 +75,7 @@ function onScroll(event){
         class="hero-img"
       />
 	  </div>
-      <div class="bio">
+      <div class="in-box">
         <h2 class="bio-title">About Me</h2>
         <p class="bio-text">
           As a soon-to-be graduate of Bradley University with a degree in Computer Science, I am interested in full time positions dealing with data analytics/engineering as well as software. </p><p class="bio-text">I consider myself to be detail-oriented and determined when it comes to solving problems. I am always excited to learn new technologies/systems.
@@ -88,30 +88,39 @@ function onScroll(event){
 				<a class="social-icon" href="https://www.hackerrank.com/nstanfield"><i class="fab fa-hackerrank"></i></a>
        </div>
       </div>
-	</section>
+	</section id="section-wrap">
 	 <hr class="m-0" />
 	<section class="education" id="education">
-	<div class="centered-content">
-      <h2 class="skill-header">Education</h2>
+	<div class="centered-content2">
+	<div class="education-col">
+      <h2 class="skill-header" style="width: 20rem;">Education</h2>
+	  <div class="in-box-ed">
 	  <h3>Bradley University</h3>
 	  <h4>Degree in Computer Science</h4>
 	  <h5>August 2019 - May 2023</h5>
 	  <p>GPA: 3.69</p>
-	  <br>
+	  </div>
+	  <div class="in-box-ed">
 	  <h3>Geneseo High School</h3>
 	  <h4>Magna Cum Laude</h4>
 	  <h5>August 2015 - May 2019</h5>
-	  <br>
-	  <h2 class="skill-header">Experience</h2>
+	  </div>
+	  </div>
+	  <div class="education-col">
+	  <h2 class="skill-header" style="width: 30rem;">Experience</h2>
+	  <div class="in-box-ex">
 	  <h3>Overnight Grocery Clerk</h3>
 	  <h4>Kroger</h4>
 	  <h5>July 2022 - November 2022</h5>
 	  <p>Coordinated with the grocery team to accept delivery trucks. Together we kept the store organized and presentable. Handled customers and assisted with their requests.</p>
-	  <br>
+	  </div>
+	  <div class="in-box-ex">
 	  <h3>Lighting Crew</h3>
 	  <h4>Geneseo High School Theater Department</h4>
 	  <h5>January 2017 - April 2017</h5>
 	  <p>Worked to create the lighting system for a theater show. Process involved learning new lighting technology to create an experience to compliment the theater performance.</p>
+	  </div>
+	  </div>
 	  </div>
     </section>
 	 <hr class="m-0" />
@@ -121,50 +130,69 @@ function onScroll(event){
 
       <div class="skills-wrapper">
         <div>
+		<div class="icon-card">
           <img
 			title="Python"
             src="icons/icon-python.png"
             alt=""
             loading="lazy"
-            class="icon icon-card"
+			class="icon"
           />
+		  <h3>Python</h3>
+		  <h3 class="extra-info">Libraries: Pandas, Numpy, Django, Pygame</h3>
+		  </div>
+		  <div class="icon-card">
 		  <img
-			title="Django"
-            src="icons/icon-django.png"
+			title="Javascript"
+            src="icons/icon-js.png"
             alt=""
             loading="lazy"
-            class="icon icon-card"
+			class="icon"
           />
+		  <h3>Javascript</h3>
+		  </div>
+		  <div class="icon-card">
           <img
 			title="MySQL"
             src="icons/icon-mysql.png"
             alt=""
             loading="lazy"
-            class="icon icon-card"
+			class="icon"
           />
+		  <h3>SQL</h3>
+		  </div>
         </div>
 		<div>
+		<div class="icon-card">
 		 <img
 			title="HTML"
             src="icons/icon-html.png"
             alt=""
             loading="lazy"
-            class="icon icon-card"
+            class="icon"
           />
+		  <h3>HTML</h3>
+		  </div>
+		  <div class="icon-card">
           <img
 			title="CSS"
             src="icons/icon-css.png"
             alt=""
             loading="lazy"
-            class="icon icon-card"
+            class="icon"
           />
+		  <h3>CSS</h3>
+		  </div>
+		  <div class="icon-card">
 		  <img
 			title="Git"
             src="icons/icon-git.png"
             alt=""
             loading="lazy"
-            class="icon icon-card"
+            class="icon"
           />
+		  <h3>Git</h3>
+		  </div>
         </div>
       </div>
 	  </div>
@@ -174,12 +202,12 @@ function onScroll(event){
 	<div class="centered-content">
       <h2 class="skill-header">Projects</h2>
 	  <h3>OSF Diabetic Ketoacidosis Project</h3>
-	  <h4>Python | Machine Learning</h4>
+	  <h4>Python | Pandas | Django| Machine Learning</h4>
 	  <h3>Astronomical Data Project</h3>
-	  <h4>Python | Machine Learning</h4>
+	  <h4>Python | Pandas | Machine Learning</h4>
 	  <p>Used a dataset consisting of astronmical data to develop a model with machine learning algorithms. The goal of the model was to predict if an object was a star, galaxy, or quasar. A presentation was created and delivered to describe the model and findings.</p>
 	  <h3>Pathfinding Simulation Project</h3>
-	  <h4>Python | Algorithms</h4>
+	  <h4>Python | Pygame | Algorithms</h4>
 	  <p>A project coded in python that allows the user to place a start and end point with obstacles walls on a grid. Then the program shows a visual simulation of the chosen pathfinding algorithm and how it would determine the shortest path from the start to the end.</p>
 	  <h3>2 Player Tic-Tac-Toe Project</h3>
 	  <h4>Python | Networking</h4>
