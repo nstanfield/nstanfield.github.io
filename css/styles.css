@@ -126,6 +126,26 @@ nav ul li {
   border-radius: 40%;
   overflow: hidden;
   border: 8px solid var(--primary-color);
+
+}
+.overlay {
+  position: relative;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+}
+
+.overlay:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(124,79,237, 0.25);
 }
 .in-box {
   background-color: #0E131F;
@@ -157,11 +177,13 @@ nav ul li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 20rem;
-  height: 9rem;
+  max-width: 35rem;
+  min-width: 15rem;
+  max-height: 9rem;
+  min-height: 9rem;
   padding: 0.825rem;
-  margin: 3rem 0;
-  border-radius: 10%;
+  margin: 3rem;
+  border-radius: 20px;
   box-shadow: 0px 2px 8px 2px var(--primary-shadow);
   transition: 0.3s;
 }
@@ -174,11 +196,13 @@ nav ul li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30rem;
-  height: 15rem;
+  max-width: 45rem;
+  min-width: 25rem;
+  max-height: 12rem;
+  min-height: 12rem;
   padding: 0.825rem;
-  margin: 3rem 0;
-  border-radius: 10%;
+  margin: 3rem;
+  border-radius: 20px;
   box-shadow: 0px 2px 8px 2px var(--primary-shadow);
   transition: 0.3s;
 }
@@ -200,36 +224,33 @@ nav ul li {
 .skills-wrapper img {
   padding: 1.5rem;
 }
-
+.skill-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .icon {
-  width: 11.875rem;
-  height: 11.25rem;
+  max-width: 10rem;
+  max-height: 9rem;
 }
 .icon-card {
-		  display: inline-flex;
-	  flex-direction: column;
+  display: inline-flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #0E131F;
-  width: 15rem;
-  height: 15rem;
+  max-width: 12rem;
+  min-width: 12rem;
+  max-height: 10rem;
+  min-height: 10rem;
   border-radius: 15px;
   box-shadow: 0 3px 10px var(--secondary-shadow);
   transition: 0.3s;
-  padding: 8rem 0;
+  padding: 6rem;
   margin: 1.5rem;
 }
 .icon-card:hover{
 	transform: scale(1.2);
-}
-.icon-card:hover .extra-info{
-	display: block;
-	opacity:1;
-}
-.extra-info {
-	display:none;
-	opacity:0;
-	transition:0.25s;
 }
 hr {
     display: block;
@@ -279,24 +300,14 @@ section {
 	height: 100vh;
 	margin: 6.2em 0;
 }
-.centered-content {
-	  display: inline-flex;
-	  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  	text-align: center;
-	width: 45vw;
-	height: 85vh;
-	margin: auto;
-}
+
 .centered-content2 {
-	  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
   	text-align: center;
-	width: 45vw;
+	width: 60vh;
 	height: 85vh;
-	margin: auto;
 }
 .m-0 {
 	margin: 0;
