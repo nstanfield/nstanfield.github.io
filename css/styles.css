@@ -52,7 +52,7 @@ h2 {
 }
 h3 {
 	color: #E0FBFC;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.5vw;
 	font-family: DM Serif Text;
 }
 h4 {
@@ -77,19 +77,19 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 3.5rem;
+  padding: 1rem 3.5rem;
   background-color: #7b56d9;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 nav h1 {
   color: #ffffff;
-  font-size: 35px;
+  font-size: 2vw;
 }
 
 nav a {
   color: #d4d4d4;
   transition: var(--transition);
-  font-size: 20px;
+  font-size: 1.1vw;
 }
 nav a:hover {
   color: #e7e7e7;
@@ -111,18 +111,18 @@ nav ul li {
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
-  max-width: 68.75rem;
+  max-width: 60vw;
   margin: auto;
 }
 .hero img {
   height: 28rem;
-  width: 24.6rem;
+  min-width: 24.6rem;
   object-fit: cover;
   filter: grayscale(100%);
 }
 .cropped {
   height: 28.125rem;
-  width: 25rem;
+  min-width: 23.5rem;
   border-radius: 40%;
   overflow: hidden;
   border: 8px solid var(--primary-color);
@@ -150,7 +150,8 @@ nav ul li {
 .in-box {
   background-color: #0E131F;
   text-align: center;
-  width: 35rem;
+  min-width: 35rem;
+  max-width: 50%;
   padding: 0.625rem;
   border-radius: 6px;
   box-shadow: 0px 2px 15px 2px var(--primary-shadow);
@@ -216,8 +217,8 @@ nav ul li {
 
 .skill-header {
   padding: 0.825rem;
-  font-size: 1.8vw;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
   font-family: Ubuntu;
 }
 
@@ -251,6 +252,55 @@ nav ul li {
 }
 .icon-card:hover{
 	transform: scale(1.2);
+}
+.project-card {
+  background-color: #0E131F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 26rem;
+  min-width: 26rem;
+  max-height: 18rem;
+  min-height: 18rem;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 20px;
+  box-shadow: 0px 2px 8px 2px var(--primary-shadow);
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.project-card:hover{
+	transform: scale(1.15);
+}
+.fa-rocket {
+  color: #7c4fed;
+  height: 4.5rem;
+  width: 4.5rem;
+  font-size:1.5rem;
+  padding: 1rem;
+}
+.fa-diamond {
+  color: #7c4fed;
+  height: 4.5rem;
+  width: 4.5rem;
+  font-size:1.5rem;
+  padding: 1rem;
+}
+.fa-compass {
+  color: #7c4fed;
+  height: 4.5rem;
+  width: 4.5rem;
+  font-size:1.5rem;
+  padding: 1rem;
+}
+.fa-network-wired {
+  color: #7c4fed;
+  height: 4.5rem;
+  width: 4.5rem;
+  font-size:1.5rem;
+  padding: 1rem;
 }
 hr {
     display: block;
@@ -309,9 +359,138 @@ section {
 	width: 60vh;
 	height: 85vh;
 }
-.m-0 {
-	margin: 0;
-}
-.section-wrap:before, .section-wrap:after {
-        height: 6.55em; /* Increaseheight by .05em */
+@media screen and (max-width: 900px) {
+	h2 {
+	color: #E0FBFC;
+  }
+	h3 {
+	color: #E0FBFC;
+	margin-bottom: 0.5vw;
+	font-family: DM Serif Text;
+  }
+	h4 {
+	color: #d5ccdb;
+	margin-bottom: 0.5rem;
+  }
+	h5 {
+	color: #7c4fed;
+	margin-bottom: 0.5rem;
+  }
+	p {
+	color: #E0FBFC;
+	margin-bottom: 1rem;
+	font-family: Be Vietnam Pro;
+  }
+  nav {
+	padding: 2vw 6vh;
+  }
+  nav h1 {
+    font-size: 5vw;
+  }
+  nav a {
+  font-size: 3.5vw;
+  }
+  nav ul {
+  gap: 5vw;
+  }
+  .hero {
+  gap: 6vw;
+  max-width: 90vw;
+  }
+  .hero img {
+  height: 20%;
+  max-width: 50%;
+
+  }
+  .cropped {
+  height: 15%;
+  width: 15%;
+  }
+  .in-box {
+  min-width: 70%;
+  max-width: 90%;
+  padding: 0.625rem;
+  }
+  .bio h1 {
+  font-size: 1vw;
+  }
+  .bio p {
+  font-size: 1vw;
+  padding: 0.3rem 0;
+  }
+  .education {
+  max-width: 90vw;
+  }
+  .in-box-ed {
+  max-width: 8vw;
+  min-width: 8vw;
+  max-height: 9rem;
+  min-height: 9rem;
+  padding: 0.825rem;
+  margin: 3rem;
+  }
+  .in-box-ex {
+  max-width: 65vw;
+  min-width: 65vw;
+  max-height: 45vh;
+  min-height: 45vh;
+  padding: 0.825rem;
+  margin: 3rem;
+  border-radius: 20px;
+  box-shadow: 0px 2px 8px 2px var(--primary-shadow);
+  transition: 0.3s;
+  }
+  .skills {
+  max-width: 68.75rem;
+  margin: auto;
+  }
+  .skill-header {
+  padding: 0.825rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+  }
+  .skills-wrapper img {
+  padding: 1.5rem;
+  }
+  .icon {
+  max-width: 10rem;
+  max-height: 9rem;
+  }
+  .icon-card {
+  max-width: 12rem;
+  min-width: 12rem;
+  max-height: 10rem;
+  min-height: 10rem;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  transition: 0.3s;
+  padding: 6rem;
+  margin: 1.5rem;
+  }
+  body {
+    margin: 0;
+    height:100%;
+    width:100%;
+    padding:0;
+  }
+
+  section {
+	  	display: flex;
+    align-items: center;
+	justify-content: center;
+	text-align: center;
+	  background: transparent;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 18vw;
+	padding-bottom: 18vw;
+	width: 100%;
+	height: 100%;
+	margin: 5vw 0;
+  }
+
+  .centered-content2 {
+    height:100%;
+    width:100%;
+  }
 }

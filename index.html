@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="css/styles.css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -91,7 +92,6 @@ function onScroll(event){
        </div>
       </div>
 	</section id="section-wrap">
-	 <hr class="m-0" />
 	<section class="education" id="education">
 	<div class="centered-content2">
 	<div class="education-col">
@@ -126,7 +126,6 @@ function onScroll(event){
 	  </div>
 	  </div>
     </section>
-	 <hr class="m-0" />
      <section class="skills" id="skills">
 	 <div class="centered-content">
       <h2 class="skill-header">Skills</h2>
@@ -200,21 +199,37 @@ function onScroll(event){
       </div>
 	  </div>
     </section>
-	 <hr class="m-0" />
     <section class="projects" id="projects">
 	<div class="centered-content">
       <h2 class="skill-header">Projects</h2>
-	  <h3>OSF Diabetic Ketoacidosis Project</h3>
-	  <h4>Python | Pandas | Django| Machine Learning</h4>
-	  <h3>Astronomical Data Project</h3>
-	  <h4>Python | Pandas | Machine Learning</h4>
-	  <p>Used a dataset consisting of astronmical data to develop a model with machine learning algorithms. The goal of the model was to predict if an object was a star, galaxy, or quasar. A presentation was created and delivered to describe the model and findings.</p>
-	  <h3>Pathfinding Simulation Project</h3>
-	  <h4>Python | Pygame | Algorithms</h4>
-	  <p>A project coded in python that allows the user to place a start and end point with obstacles walls on a grid. Then the program shows a visual simulation of the chosen pathfinding algorithm and how it would determine the shortest path from the start to the end.</p>
-	  <h3>2 Player Tic-Tac-Toe Project</h3>
-	  <h4>Python | Networking</h4>
-	  <p>Program that allows 2 players to simultaniously connect to a server and play tic-tac-toe against each other. Uses sockets and multithreading.</p>
+	  <div class="skill-row">
+	  <div class="project-card">
+	  <i class="fa-solid fa-diamond"></i>
+	  <h3 style="font-size: 18px;">OSF Diabetic Ketoacidosis Project</h3>
+	  <h4 style="font-size: 16px;">Python | Pandas | Django| Machine Learning</h4>
+	  <p style="font-size: 14px;">Used a dataset of patients with Diabetic Ketoacidosis from Harvard to develop a machine learning model. The goal of the model was to predict how many hours to get a resolution on the patient's DKA diagnosis. Deployed a website using Django that allows a user to input data to see a real time prediction using the developed model.</p>
+	  </div>
+	  <div class="project-card">
+	  <i class="fa-solid fa-rocket"></i>
+	  <h3 style="font-size: 18px;">Astronomical Data Project</h3>
+	  <h4 style="font-size: 16px;">Python | Pandas | Machine Learning</h4>
+	  <p style="font-size: 14px;">Used a dataset consisting of astronmical data to develop a model with machine learning algorithms. The goal of the model was to predict if an object was a star, galaxy, or quasar. A presentation was created and delivered to describe the model and findings.</p>
+	  </div>
+	  </div>
+	  <div class="skill-row">
+	  <div class="project-card">
+	  <i class="fa-solid fa-compass"></i>
+	  <h3 style="font-size: 18px;">Pathfinding Simulation Project</h3>
+	  <h4 style="font-size: 16px;">Python | Pygame | Algorithms</h4>
+	  <p style="font-size: 14px;">A project coded in python that allows the user to place a start and end point with obstacles walls on a grid. Then the program shows a visual simulation of the chosen pathfinding algorithm and how it would determine the shortest path from the start to the end.</p>
+	  </div>
+	  <div class="project-card">
+	  <i class="fa-solid fa-network-wired"></i>
+	  <h3 style="font-size: 18px;">2 Player Tic-Tac-Toe Project</h3>
+	  <h4 style="font-size: 16px;">Python | Networking</h4>
+	  <p style="font-size: 14px;">Program that allows 2 players to simultaniously connect to a server and play tic-tac-toe against each other. Uses sockets and multithreading.</p>
+	  </div>
+	  </div>
 	  </div>
     </section>
 	<hr class="m-0" />
