@@ -117,12 +117,14 @@ nav ul li {
 .hero img {
   height: 28rem;
   min-width: 24.6rem;
+  max-width: 24.6rem;
   object-fit: cover;
   filter: grayscale(100%);
 }
 .cropped {
   height: 28.125rem;
   min-width: 23.5rem;
+  max-width: 24.6rem;
   border-radius: 40%;
   overflow: hidden;
   border: 8px solid var(--primary-color);
